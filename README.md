@@ -7,13 +7,12 @@ Virtual machine software written in Batch
 To add a new CPU architecture, follow these steps:
 
 * See [CONTRIBUTING.md](./CONTRIBUTING.md)
-* Create a folder inside of `/cpu-archs/` with the name of the CPU architecture
-* Follow the example directory structure:
+* Create a folder inside of `/src/cpu-archs/` with the name of the CPU architecture
+* Follow the example directory structure for the directories inside `/src/cpu-archs`:
 
 ```plaintext
-/cpu-archs/
-    <cpu name>/
-        emulation.bat
+<cpu name>/
+    emulation.bat
         examples/
             example1.bvm
             <other examples are optional>
@@ -28,12 +27,20 @@ git clone https://github.com/benja2998/BVM.git
 cd BVM
 ```
 
-You should then choose a CPU architecture. For example to use bvm-cpu:
+You should then run src/bvm.bat:
 
 ```batch
-cd cpu-archs
-cd bvm-cpu
-.\emulation.bat
+cd src
+bvm.bat
+```
+
+On Unix-like systems, you can run the script with:
+
+```bash
+cd src
+wine cmd /c bvm.bat # Assuming you have Wine installed
+# Not guaranteed to work, very likely to fail!
+# Report any issues with compatibility of the Batch file to WineHQ, NOT us!
 ```
 
 ## FAQ

@@ -1,0 +1,33 @@
+MOV R1, 72
+PRA R1 ; Print ASCII character for 72 (should print 'H')
+MOV R2, 101
+PRA R2 ; Print ASCII character for 101 (should print 'e')
+MOV R3, 108
+PRA R3 ; Print ASCII character for 108 (should print 'l')
+PRA R3 ; Print ASCII character for 108 (should print 'l' again)
+MOV R4, 111
+PRA R4 ; Print ASCII character for 111 (should print 'o')
+MOV R5, 32
+PRA R5 ; Print ASCII character for 32 (should print space)
+MOV R6, 119
+PRA R6 ; Print ASCII character for 119 (should print 'w')
+PRA R4 ; Print ASCII character for 111 (should print 'o' again)
+MOV R7, 114
+PRA R7 ; Print ASCII character for 114 (should print 'r')
+PRA R3 ; Print ASCII character for 108 (should print 'l')
+MOV R8, 100
+PRA R8 ; Print ASCII character for 100 (should print 'd')
+MOV R9, 33
+PRA R9 ; Print ASCII character for 33 (should print '!')
+; Divide all registers by themselves
+DIV R1, R1 ; Should result in 1
+DIV R2, R2 ; Should result in 1
+DIV R3, R3 ; Should result in 1
+DIV R4, R4 ; Should result in 1
+DIV R5, R5 ; Should result in 1
+DIV R6, R6 ; Should result in 1
+DIV R7, R7 ; Should result in 1
+DIV R8, R8 ; Should result in 1
+DIV R9, R9 ; Should result in 1
+SUB R1, R1 ; Subtract R1 from itself (should result in 0)
+HLT ; Exit the program with exit code 0 (uses R1 as exit code)

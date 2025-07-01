@@ -12,7 +12,10 @@ STEP2:
 
 MOV R3, 10 ; Move 10 to register R3
 PRN R3 ; Print the R3 register
-HLT
+RET
 
 STEP1:
-JMP STEP2 ; Jump to STEP2
+CALL STEP2 ; Call the subroutine STEP2
+MOV R9, 10 ; Move 10 to register R9
+PRN R9 ; Print the R9 register
+HLT ; Exit the program

@@ -1,0 +1,2 @@
+MOV R1, 69
+; Don't exit using HLT to cause a segmentation fault
