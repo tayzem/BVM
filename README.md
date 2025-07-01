@@ -8,16 +8,19 @@ It currently only supports a basic custom CPU architecture.
 
 ## Adding new CPU architectures
 
-To add a new CPU architecture, you need to create a new folder in the `cpu-archs` directory. Inside this folder, you should create a folder called the name of the CPU architecture. Inside this folder, you should create a file called `emulation.bat` that contains the emulation logic for the new architecture. You should also create a folder called `examples` that contains example programs for the new architecture.
-Example directory structure:
+To add a new CPU architecture, follow these steps:
+
+* See [CONTRIBUTING.md](./CONTRIBUTING.md)
+* Create a folder inside of `/cpu-archs/` with the name of the CPU architecture
+* Follow the example directory structure:
 
 ```markdown
-cpu-archs/
-    bvm-cpu/
+/cpu-archs/
+    <cpu name>/
         emulation.bat
         examples/
             example1.bvm
-            example2.bvm
+            <other examples are optional>
 ```
 
 ## FAQ
