@@ -1,0 +1,18 @@
+MOV R1, 4 ; Move 4 to register R1
+MOV R2, R1 ; Move the value of R1 to R2
+PRN R2 ; Print the R2 register
+SUB R1, R1 ; Subtract R1 from itself (should result in 0)
+JMP STEP1 ; Jump to STEP1
+
+NOT_EXECUTED:
+MUL R2, 2 ; Multiply R2 by 2 (should not be executed)
+PRN R2 ; Print the R2 register (should not be executed)
+
+STEP2:
+
+MOV R3, 10 ; Move 10 to register R3
+PRN R3 ; Print the R3 register
+HLT
+
+STEP1:
+JMP STEP2 ; Jump to STEP2
